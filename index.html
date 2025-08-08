@@ -1,58 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahesh Vadlapudi - Portfolio</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        header { background: #333; color: white; padding: 15px; text-align: center; }
-        section { padding: 20px; }
-        h2 { color: #333; }
-        a { color: blue; text-decoration: none; }
-        footer { background: #333; color: white; text-align: center; padding: 10px; margin-top: 20px; }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mahesh Vadlapudi — Portfolio</title>
+  <meta name="description" content="Mahesh Vadlapudi — Data Analyst. Excel, SQL, Power BI, Python. Portfolio & Projects."/>
+  <style>
+    :root{
+      --accent:#2563eb;
+      --muted:#666;
+      --card-bg:#f8fafc;
+      --maxw:980px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;color:#0f172a;background:#fff;line-height:1.5}
+    .wrap{max-width:var(--maxw);margin:24px auto;padding:0 16px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    h1{margin:0;font-size:1.25rem}
+    p.lead{margin:4px 0 0;color:var(--muted);font-size:0.95rem}
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;margin-top:18px;padding:18px;border-radius:12px;background:linear-gradient(90deg, rgba(37,99,235,0.06), rgba(124,58,237,0.03));}
+    @media(min-width:760px){ .hero{grid-template-columns:1fr 320px} }
+    .card{background:var(--card-bg);padding:14px;border-radius:10px;box-shadow:0 6px 20px rgba(2,6,23,0.04)}
+    .skills ul{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:8px 0 0;list-style:none}
+    .chip{padding:6px 10px;border-radius:999px;background:white;border:1px solid #e6eefb;color:#013a6b;font-weight:600;font-size:0.88rem}
+    .projects{display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px}
+    @media(min-width:760px){ .projects{grid-template-columns:1fr 1fr} }
+    .proj{padding:12px;border-radius:8px;background:white;border:1px solid #eef2ff}
+    .proj h3{margin:0 0 6px;font-size:1rem}
+    .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:var(--accent);color:white;text-decoration:none;font-weight:600}
+    footer{margin:28px 0 60px;text-align:center;color:var(--muted);font-size:0.9rem}
+    a.small{color:var(--accent);text-decoration:none}
+    .contact-list{margin:8px 0 0;padding:0;list-style:none}
+    .contact-list li{margin:6px 0}
+    .meta{font-size:0.85rem;color:var(--muted)}
+  </style>
 </head>
 <body>
+  <div class="wrap">
     <header>
-        <h1>Mahesh Vadlapudi</h1>
-        <p>Data Analyst | Business Analyst</p>
+      <div class="brand">
+        <div class="logo">MV</div>
+        <div>
+          <h1>Mahesh Vadlapudi</h1>
+          <p class="lead">Aspiring Data Analyst — Excel · SQL · Power BI · Python</p>
+        </div>
+      </div>
+
+      <nav class="meta">
+        <a class="small" href="#projects">Projects</a> ·
+        <a class="small" href="#certifications">Certifications</a> ·
+        <a class="small" href="#contact">Contact</a> ·
+        <a class="small" href="https://github.com/maheshtech15" target="_blank" rel="noopener">GitHub</a>
+      </nav>
     </header>
 
-    <section>
+    <section class="hero" aria-label="Introduction">
+      <div class="card">
         <h2>About Me</h2>
-        <p>I am an aspiring Data Analyst with strong skills in Excel, SQL, Power BI, and Python. I have experience in data cleaning, visualization, and dashboard creation.</p>
+        <p>I build actionable insights from data. Comfortable with cleaning messy datasets, writing SQL queries, building Power BI dashboards, and automating analysis with Python.</p>
+
+        <div style="margin-top:12px">
+          <h3 style="margin:0 0 8px">Skills</h3>
+          <div class="skills">
+            <ul>
+              <li class="chip">Excel — Pivot & Dashboards</li>
+              <li class="chip">SQL (MySQL / SQLite)</li>
+              <li class="chip">Power BI</li>
+              <li class="chip">Python (pandas)</li>
+              <li class="chip">Data Cleaning</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="margin-top:14px">
+          <h3 style="margin:0 0 8px">Quick Links</h3>
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn" href="mailto:maheshvadlapudi05@gmail.com" style="background:#0ea5a6;margin-left:8px">Email Me</a>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3>Contact</h3>
+          <ul class="contact-list">
+            <li><strong>Email:</strong> <a href="mailto:maheshvadlapudi05@gmail.com">maheshvadlapudi05@gmail.com</a></li>
+            <li><strong>Phone:</strong> 6303095122</li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/maheshtech15" target="_blank" rel="noopener">github.com/maheshtech15</a></li>
+          </ul>
+        </div>
+
+        <div style="height:12px"></div>
+
+        <div class="card">
+          <h3>Resume</h3>
+          <p class="meta">Add a link to your PDF resume here so employers can download it quickly.</p>
+          <p style="margin-top:12px"><a class="btn" href="#" target="_blank" rel="noopener">Download Resume</a></p>
+        </div>
+      </aside>
     </section>
 
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>Microsoft Excel (Advanced formulas, Pivot Tables, Dashboards)</li>
-            <li>SQL & Database Queries</li>
-            <li>Power BI & Data Visualization</li>
-            <li>Python for Data Analysis</li>
-            <li>Analytical Thinking & Problem-Solving</li>
-        </ul>
+    <section id="projects" style="margin-top:18px">
+      <h2>Projects</h2>
+      <div class="projects">
+        <article class="proj">
+          <h3>Sales Dashboard (Power BI)</h3>
+          <p class="meta">Interactive dashboard showing revenue, top products, and monthly trends.</p>
+          <p style="margin-top:8px"><a href="#" target="_blank" rel="noopener">View project</a></p>
+        </article>
+
+        <article class="proj">
+          <h3>Movie Rental Analysis (SQL)</h3>
+          <p class="meta">SQL queries for customer segmentation, top rentals, and monthly rentals.</p>
+          <p style="margin-top:8px"><a href="#" target="_blank" rel="noopener">View project</a></p>
+        </article>
+
+        <article class="proj">
+          <h3>Excel Employee Tracker</h3>
+          <p class="meta">Employee attendance tracker with pivot summaries and charts.</p>
+          <p style="margin-top:8px"><a href="#" target="_blank" rel="noopener">View project</a></p>
+        </article>
+
+        <article class="proj">
+          <h3>Retail SQL Report</h3>
+          <p class="meta">Sales by region, top categories, and monthly trends using MySQL/SQLite.</p>
+          <p style="margin-top:8px"><a href="#" target="_blank" rel="noopener">View project</a></p>
+        </article>
+      </div>
     </section>
 
-    <section>
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>Sales Dashboard (Power BI)</strong> - <a href="#">View Project</a></li>
-            <li><strong>Movie Rental Analysis (SQL)</strong> - <a href="#">View Project</a></li>
-            <li><strong>Excel Employee Tracker</strong> - <a href="#">View Project</a></li>
-        </ul>
+    <section id="certifications" style="margin-top:18px">
+      <h2>Certifications</h2>
+      <ul>
+        <li><strong>Data Analytics Job Simulation</strong> – Deloitte (Forage) – July 21, 2025  
+          <a href="http://theforage.com/" target="_blank" rel="noopener">View Certificate</a>
+        </li>
+        <li><strong>Excel</strong> – One Roadmap – July 30, 2025  
+          <a href="https://oneroadmap.io/skills/excel/certificate/CERT-08A09130" target="_blank" rel="noopener">Verify</a>
+        </li>
+        <li><strong>SQL</strong> – One Roadmap – July 30, 2025  
+          <a href="https://oneroadmap.io/skills/sql/certificate/CERT-3F93DC92" target="_blank" rel="noopener">Verify</a>
+        </li>
+        <li><strong>Data Analyst</strong> – One Roadmap – July 25, 2025  
+          <a href="https://oneroadmap.io/skills/da/certificate/CERT-27BE7114" target="_blank" rel="noopener">Verify</a>
+        </li>
+        <li><strong>Introduction to Data Analytics</strong> – March 26, 2025  
+          <span style="color:#666;">Certificate Code: 8099772</span>
+        </li>
+      </ul>
     </section>
 
-    <section>
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:maheshvadlapudi05@gmail.com">maheshvadlapudi05@gmail.com</a></p>
-        <p>Phone: 6303095122</p>
-        <p>GitHub: <a href="https://github.com/maheshtech15">github.com/maheshtech15</a></p>
+    <section id="contact" style="margin-top:18px">
+      <h2>Get in touch</h2>
+      <p>If you'd like to work together or see project files, email me or visit my GitHub.</p>
+      <p><a class="btn" href="mailto:maheshvadlapudi05@gmail.com">maheshvadlapudi05@gmail.com</a></p>
     </section>
 
     <footer>
-        <p>© 2025 Mahesh Vadlapudi</p>
+      <small>© <span id="year"></span> Mahesh Vadlapudi — Built with GitHub Pages</small>
     </footer>
+  </div>
+
+  <script>
+    // fill current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
