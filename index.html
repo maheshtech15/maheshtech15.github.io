@@ -23,7 +23,7 @@
             font-size: 2.5rem;
         }
         main {
-            max-width: 900px;
+            max-width: 1000px;
             margin: auto;
             background: white;
             padding: 20px;
@@ -36,34 +36,30 @@
             border-bottom: 2px solid #007acc;
             padding-bottom: 5px;
         }
-        h3 {
-            margin-top: 20px;
+        .project-card {
+            background: #fafafa;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.05);
+        }
+        .project-card h3 {
+            margin-top: 0;
             color: #333;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin: 10px 0;
-        }
-        a {
-            color: #007acc;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .download-btn {
+        .project-buttons a {
+            display: inline-block;
             background-color: #007acc;
             color: white;
-            padding: 5px 10px;
-            margin-left: 10px;
+            padding: 8px 15px;
+            margin-top: 10px;
+            margin-right: 5px;
             border-radius: 5px;
             text-decoration: none;
             font-size: 0.9em;
         }
-        .download-btn:hover {
+        .project-buttons a:hover {
             background-color: #005f99;
         }
     </style>
@@ -79,26 +75,11 @@
         <section id="certifications">
             <h2>My Certifications</h2>
             <ul>
-                <li>
-                    <a href="excel_certificate.pdf" target="_blank">Excel Certificate</a>
-                    <a href="excel_certificate.pdf" download class="download-btn">Download</a>
-                </li>
-                <li>
-                    <a href="data_analyst_certification.pdf" target="_blank">Data Analyst Certification</a>
-                    <a href="data_analyst_certification.pdf" download class="download-btn">Download</a>
-                </li>
-                <li>
-                    <a href="sql_certificate.pdf" target="_blank">SQL Certificate</a>
-                    <a href="sql_certificate.pdf" download class="download-btn">Download</a>
-                </li>
-                <li>
-                    <a href="deloitte_virtual_completion_certificate.pdf" target="_blank">Deloitte Virtual Completion Certificate</a>
-                    <a href="deloitte_virtual_completion_certificate.pdf" download class="download-btn">Download</a>
-                </li>
-                <li>
-                    <a href="introduction_to_data_analytics.pdf" target="_blank">Certificate of Introduction to Data Analytics</a>
-                    <a href="introduction_to_data_analytics.pdf" download class="download-btn">Download</a>
-                </li>
+                <li><a href="excel_certificate.pdf" target="_blank">Excel Certificate</a></li>
+                <li><a href="data_analyst_certification.pdf" target="_blank">Data Analyst Certification</a></li>
+                <li><a href="sql_certificate.pdf" target="_blank">SQL Certificate</a></li>
+                <li><a href="deloitte_virtual_completion_certificate.pdf" target="_blank">Deloitte Virtual Completion Certificate</a></li>
+                <li><a href="introduction_to_data_analytics.pdf" target="_blank">Certificate of Introduction to Data Analytics</a></li>
             </ul>
         </section>
 
@@ -107,39 +88,47 @@
             <h2>Projects</h2>
 
             <!-- SQL Project -->
-            <h3>Retail Sales Report (SQL)</h3>
-            <p>
-                SQL project analyzing monthly and regional sales trends using 
-                <strong>JOIN</strong>, <strong>GROUP BY</strong>, and filters to identify top-performing categories.
-                Delivered summary reports to support business strategy.
-            </p>
-            <a href="Retail_Sales_Report_SQL.pptx" target="_blank" class="download-btn">View PPT</a>
-            <a href="Retail_Sales_Report_SQL.pptx" download class="download-btn">Download PPT</a>
+            <div class="project-card">
+                <h3>Retail Sales Report (SQL)</h3>
+                <p>
+                    Analyzed monthly and regional sales trends using SQL queries with JOIN, GROUP BY, 
+                    and filters to identify top-performing categories. Delivered summary reports to 
+                    support business strategy.
+                </p>
+                <div class="project-buttons">
+                    <a href="Retail_Sales_Report_SQL.pdf" target="_blank">View PDF</a>
+                    <a href="Retail_Sales_Report_SQL.pdf" download>Download PDF</a>
+                </div>
+            </div>
 
             <!-- Tableau Project -->
-            <h3>Tableau Dashboard</h3>
-            <p>Downtime by Factory & Machine Type – Daikibo (May 2021)</p>
-            <a href="tableau_dashboard.jpg" target="_blank">
-                <img src="tableau_dashboard.jpg" alt="Tableau Dashboard Screenshot" style="border:1px solid #ccc; border-radius:8px; width:100%; max-width:600px;">
-            </a>
+            <div class="project-card">
+                <h3>Tableau Dashboard</h3>
+                <p>Downtime by Factory & Machine Type – Daikibo (May 2021)</p>
+                <a href="tableau_dashboard.jpg" target="_blank">
+                    <img src="tableau_dashboard.jpg" alt="Tableau Dashboard Screenshot" style="width:100%; border-radius:5px;">
+                </a>
+            </div>
 
             <!-- Deloitte Project -->
-            <h3>Deloitte Virtual Completion Certificate</h3>
-            <p>Completion of Deloitte's Virtual Internship Program</p>
-            <a href="deloitte_virtual_completion_certificate.pdf" target="_blank">
-                <img src="deloitte_virtual_completion_certificate.pdf" alt="Deloitte Virtual Certificate" style="border:1px solid #ccc; border-radius:8px; width:100%; max-width:600px;">
-            </a>
+            <div class="project-card">
+                <h3>Deloitte Virtual Completion Certificate</h3>
+                <p>Completion of Deloitte's Virtual Internship Program</p>
+                <a href="deloitte_virtual_completion_certificate.pdf" target="_blank">
+                    <img src="deloitte_virtual_completion_certificate.pdf" alt="Deloitte Virtual Certificate" style="width:100%; border-radius:5px;">
+                </a>
+            </div>
         </section>
 
         <!-- Contact -->
         <section id="contact">
             <h2>Contact Me</h2>
             <form action="https://formspree.io/f/xovlpowv" method="POST">
-                <label for="name">Name:</label><br>
+                <label>Name:</label><br>
                 <input type="text" name="name" required><br><br>
-                <label for="email">Email:</label><br>
+                <label>Email:</label><br>
                 <input type="email" name="email" required><br><br>
-                <label for="message">Message:</label><br>
+                <label>Message:</label><br>
                 <textarea name="message" rows="5" required></textarea><br><br>
                 <button type="submit">Send</button>
             </form>
