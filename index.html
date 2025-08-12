@@ -1,183 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mahesh Vadlapudi — Data Analyst Portfolio</title>
-
-  <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <style>
-    :root {
-      --bg: #f5f7fa;
-      --text: #1a1a1a;
-      --card-bg: #ffffff;
-      --primary: #2563eb;
-      --secondary: #1e40af;
-      --muted: #6b7280;
-      --radius: 12px;
-      --shadow: 0 4px 14px rgba(0,0,0,0.08);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.5;
-    }
-
-    header {
-      background: var(--card-bg);
-      box-shadow: var(--shadow);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header h1 {
-      font-size: 1.5rem;
-      color: var(--primary);
-    }
-
-    .btn {
-      background: var(--primary);
-      color: white;
-      padding: 0.6rem 1rem;
-      border-radius: var(--radius);
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.2s;
-    }
-
-    .btn:hover {
-      background: var(--secondary);
-    }
-
-    main {
-      max-width: 1100px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    h2 {
-      color: var(--primary);
-      margin-bottom: 1rem;
-      border-bottom: 2px solid var(--primary);
-      padding-bottom: 4px;
-    }
-
-    .card {
-      background: var(--card-bg);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 1.2rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .card h3 {
-      margin-bottom: 0.5rem;
-      color: var(--secondary);
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin-bottom: 0.8rem;
-    }
-
-    .card .buttons a {
-      display: inline-block;
-      background: var(--primary);
-      color: white;
-      padding: 0.5rem 0.9rem;
-      border-radius: var(--radius);
-      text-decoration: none;
-      font-size: 0.9rem;
-      margin-right: 0.5rem;
-      transition: background 0.2s;
-    }
-
-    .card .buttons a:hover {
-      background: var(--secondary);
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin-top: 2rem;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mahesh Vadlapudi – Data Analyst Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+        nav {
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav h1 {
+            margin: 0;
+            font-size: 1.6rem;
+            color: #0056b3;
+        }
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 2rem;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #0056b3;
+            font-size: 1.8rem;
+            border-bottom: 3px solid #0056b3;
+            padding-bottom: 5px;
+            margin-bottom: 1rem;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.2rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .buttons a {
+            display: inline-block;
+            background-color: #0056b3;
+            color: white;
+            padding: 8px 14px;
+            margin: 8px 5px 0 0;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: background-color 0.3s;
+        }
+        .buttons a:hover {
+            background-color: #003f88;
+        }
+    </style>
 </head>
 <body>
 
-<header>
-  <h1>Mahesh Vadlapudi — Data Analyst</h1>
-  <a href="MaheshVadlapudi_Resume_DataAnalyst.pdf" class="btn" target="_blank">
-    <i class="fa-solid fa-file-lines"></i> Resume
-  </a>
-</header>
+    <nav>
+        <h1>Mahesh Vadlapudi – Data Analyst</h1>
+    </nav>
 
-<main>
-  <section>
-    <h2>Projects</h2>
+    <main>
+        <!-- Projects -->
+        <section>
+            <h2>Projects</h2>
 
-    <div class="card">
-      <h3>Retail Sales Report (SQL)</h3>
-      <p>Analyzed monthly and regional sales trends using SQL queries to identify top categories and provide actionable insights for business strategy.</p>
-      <div class="buttons">
-        <a href="Retail_Sales_Report_SQL.pdf" target="_blank">
-          <i class="fa-solid fa-file-pdf"></i> View PDF
-        </a>
-      </div>
-    </div>
+            <!-- Marketing Campaign Dashboard -->
+            <div class="card">
+                <h3>Marketing Campaign Dashboard (Excel)</h3>
+                <p>Built a dynamic Excel dashboard using PivotTables, slicers, and formulas to evaluate campaign performance across channels and regions. Automated monthly reporting for efficiency and better insights.</p>
+                <div class="buttons">
+                    <a href="Marketing_Campaign_Dashboard.pdf" target="_blank">
+                        <i class="fa-solid fa-file-pdf"></i> View Dashboard PDF
+                    </a>
+                    <a href="Marketing_Campaign_Dashboard_Process.xlsx" target="_blank">
+                        <i class="fa-solid fa-file-excel"></i> Download Excel File
+                    </a>
+                </div>
+            </div>
 
-    <div class="card">
-      <h3>Tableau Dashboard</h3>
-      <p>Downtime by Factory & Machine Type — Interactive production insights in Tableau.</p>
-      <div class="buttons">
-        <a href="tableau_dashboard.jpg" target="_blank">
-          <i class="fa-solid fa-image"></i> View Image
-        </a>
-      </div>
-    </div>
+            <!-- Other Project Example -->
+            <div class="card">
+                <h3>Retail Sales Report (SQL)</h3>
+                <p>Analyzed monthly and regional sales trends using SQL queries with JOIN, GROUP BY, and filters to identify top-performing categories. Delivered summary reports to support business strategy.</p>
+                <div class="buttons">
+                    <a href="Retail_Sales_Report_SQL.pdf" target="_blank">
+                        <i class="fa-solid fa-file-pdf"></i> View PDF
+                    </a>
+                </div>
+            </div>
 
-    <div class="card">
-      <h3>Deloitte Virtual Internship</h3>
-      <p>Completed Deloitte's virtual internship program — hands-on exposure to consulting analytics workflows.</p>
-      <div class="buttons">
-        <a href="deloitte_virtual_completion_certificate.pdf" target="_blank">
-          <i class="fa-solid fa-certificate"></i> View Certificate
-        </a>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Marketing Campaign Dashboard (Excel)</h3>
-      <p>Designed and developed a dynamic Excel dashboard to evaluate campaign performance across channels and regions, automate monthly reporting, and track conversions.</p>
-      <div class="buttons">
-        <a href="Marketing_Campaign_Dashboard.pdf" target="_blank">
-          <i class="fa-solid fa-file-pdf"></i> View Dashboard PDF
-        </a>
-      </div>
-    </div>
-
-  </section>
-</main>
-
-<footer>
-  © 2025 Mahesh Vadlapudi — Data Analyst | <a href="https://github.com/maheshtech15" target="_blank">GitHub</a>
-</footer>
+        </section>
+    </main>
 
 </body>
 </html>
+
