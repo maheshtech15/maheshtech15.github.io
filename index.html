@@ -1,223 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mahesh Vadlapudi – Data Analyst Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-        nav {
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 0.8rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        nav h1 {
-            margin: 0;
-            font-size: 1.5rem;
-            color: #007acc;
-        }
-        main {
-            max-width: 1000px;
-            margin: auto;
-            padding: 2rem;
-        }
-        section {
-            margin-bottom: 40px;
-        }
-        h2 {
-            color: #007acc;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #007acc;
-            padding-bottom: 5px;
-        }
-        .card {
-            background: white;
-            border-radius: 10px;
-            padding: 1.2rem;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-            margin-bottom: 20px;
-        }
-        .card h3 {
-            margin-top: 0;
-            color: #333;
-        }
-        .buttons a {
-            display: inline-block;
-            background-color: #007acc;
-            color: white;
-            padding: 8px 14px;
-            margin: 8px 5px 0 0;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 0.9em;
-        }
-        .buttons a:hover {
-            background-color: #005f99;
-        }
-        ul.cert-list {
-            list-style: none;
-            padding: 0;
-        }
-        ul.cert-list li {
-            background: white;
-            margin-bottom: 10px;
-            padding: 10px;
-            border-radius: 6px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
-        }
-        ul.cert-list li a {
-            text-decoration: none;
-            color: #007acc;
-            font-weight: 500;
-        }
-        ul.cert-list li a:hover {
-            text-decoration: underline;
-        }
-        form input, form textarea, form button {
-            width: 100%;
-            padding: 10px;
-            margin-top: 8px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-        form button {
-            background-color: #007acc;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        form button:hover {
-            background-color: #005f99;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mahesh Vadlapudi — Data Analyst</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root{
+      --bg:#f4f7fb;
+      --card:#ffffff;
+      --primary:#0b79d0;
+      --accent:#00b894;
+      --muted:#6b7280;
+      --glass: rgba(255,255,255,0.6);
+      --radius:12px;
+      --shadow: 0 6px 18px rgba(16,24,40,0.08);
+      --shadow-sm: 0 4px 10px rgba(16,24,40,0.06);
+      --container:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      margin:0;
+      background: linear-gradient(180deg, #f8fbff 0%, var(--bg) 100%);
+      color:#0f1724;
+      line-height:1.45;
+    }
+    .wrap{max-width:var(--container);margin:36px auto;padding:28px;}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:28px;}
+    .brand{display:flex;gap:14px;align-items:center;}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--primary),#3db1ff);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;box-shadow: var(--shadow-sm);font-size:20px;}
+    .brand h1{margin:0;font-size:1.1rem;color:var(--primary);}
+    .brand p{margin:0;color:var(--muted);font-size:0.9rem}
+    nav .cta{display:flex;gap:10px;align-items:center;}
+    .btn{display:inline-block;padding:10px 14px;background:var(--primary);color:#fff;text-decoration:none;border-radius:8px;font-weight:600;box-shadow: var(--shadow-sm);}
+    .btn.secondary{background:transparent;color:var(--primary);border:1px solid rgba(11,121,208,0.12);}
+    .hero{background: linear-gradient(180deg, rgba(11,121,208,0.06), rgba(0,184,148,0.02));border-radius:16px;padding:22px;display:flex;gap:20px;align-items:center;box-shadow: var(--shadow);margin-bottom:28px;}
+    .hero-left{flex:1;}
+    .hero h2{margin:0 0 10px 0;color:#073b6b;font-size:1.6rem;}
+    .hero p{margin:0;color:var(--muted)}
+    .hero-actions{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+    .small{font-size:0.9rem;color:var(--muted);margin-top:6px;}
+    .hero-right{width:240px;height:120px;border-radius:12px;background:linear-gradient(135deg,#fff, rgba(255,255,255,0.9));display:flex;align-items:center;justify-content:center;flex-direction:column;box-shadow: var(--shadow-sm);border:1px solid rgba(11,121,208,0.06);}
+    .hero-right strong{color:var(--primary);font-size:1.1rem}
+    .hero-right span{color:var(--muted);font-size:0.85rem}
+    .layout{display:grid;grid-template-columns: 1fr 360px;gap:22px;align-items:start;}
+    .content{display:flex;flex-direction:column;gap:18px;}
+    .projects-grid{display:grid;grid-template-columns: repeat(auto-fit,minmax(260px,1fr));gap:16px;}
+    .card{background:var(--card);border-radius: var(--radius);padding:16px;box-shadow: var(--shadow);transition: transform .18s ease, box-shadow .18s ease;}
+    .card:hover{ transform: translateY(-6px); box-shadow: 0 16px 40px rgba(14,30,35,0.08) }
+    .card h3{margin:0 0 8px 0; color:#06283d; font-size:1.05rem}
+    .card p{margin:0;color:var(--muted);font-size:0.95rem}
+    .card .meta{ margin-top:12px; display:flex; gap:10px; flex-wrap:wrap }
+    .chip{background: #f1f7ff;color: var(--primary);padding:6px 10px;border-radius:999px;font-weight:600;font-size:0.85rem;border:1px solid rgba(11,121,208,0.06);}
+    .card .link-row{ margin-top:14px; display:flex; gap:10px; flex-wrap:wrap }
+    .card a.cta{padding:8px 12px;border-radius:8px;text-decoration:none;color:#fff;background: linear-gradient(90deg,var(--primary),#1aa0ff);font-weight:600;font-size:0.9rem;box-shadow: var(--shadow-sm);}
+    .card a.ghost{padding:8px 12px;background:transparent;color:var(--primary);border:1px solid rgba(11,121,208,0.08);border-radius:8px;text-decoration:none;font-weight:600;font-size:0.9rem;}
+    .sidebar{display:flex;flex-direction:column;gap:16px;}
+    .profile{display:flex;gap:12px;align-items:center;padding:12px;border-radius:12px;}
+    .avatar{width:64px;height:64px;border-radius:10px;background:linear-gradient(135deg,#0b79d0,#3db1ff);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:24px;}
+    .profile .info h4{margin:0;color:#08263a}
+    .profile .info p{margin:2px 0 0 0;color:var(--muted);font-size:0.9rem}
+    .contact-card{ padding:12px; border-radius:12px; background: linear-gradient(180deg,#fff, #fbfdff); box-shadow: var(--shadow); }
+    .cert-list{ display:flex; flex-direction:column; gap:8px; margin:0; padding:0; list-style:none }
+    .cert-list a{ text-decoration:none; color:var(--primary); font-weight:600; display:block; padding:8px; border-radius:8px; border:1px solid rgba(11,121,208,0.04); background:#fff }
+    footer{ margin-top:28px; text-align:center; color:var(--muted); font-size:0.9rem }
+    @media (max-width:980px){.layout{ grid-template-columns: 1fr; }.hero-right{ width:160px; height:84px; }}
+    @media (max-width:520px){.brand h1{ font-size:1rem }.logo{ width:46px;height:46px }.card h3{ font-size:1rem }}
+  </style>
 </head>
 <body>
+  <div class="wrap">
 
-    <nav>
-        <h1>Mahesh Vadlapudi – Data Analyst</h1>
-    </nav>
+    <!-- Header -->
+    <header>
+      <div class="brand">
+        <div class="logo">MV</div>
+        <div>
+          <h1>Mahesh Vadlapudi</h1>
+          <p>Data Analyst • Excel • SQL • Tableau • Power BI</p>
+        </div>
+      </div>
+      <div class="cta">
+        <a class="btn" href="MaheshVadlapudi_Resume_DataAnalyst.pdf" target="_blank"><i class="fa-solid fa-file-lines"></i>&nbsp;Resume</a>
+        <a class="btn secondary" href="https://github.com/maheshtech15" target="_blank"><i class="fa-brands fa-github"></i>&nbsp;GitHub</a>
+      </div>
+    </header>
 
-    <main>
-        <!-- About Me -->
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-left">
+        <h2>Interactive Marketing Campaign Dashboard — Excel</h2>
+        <p>Built a dynamic Excel dashboard using PivotTables, slicers, timelines and clean visualizations to measure campaign ROI, conversions and trends across channels and regions.</p>
+        <div class="hero-actions">
+          <a class="btn" href="Marketing_Campaign_Dashboard.xlsx" target="_blank"><i class="fa-solid fa-file-excel"></i>&nbsp;View Dashboard (Excel)</a>
+          <a class="btn secondary" href="Marketing_Campaign_Dashboard_Process.xlsx" target="_blank"><i class="fa-solid fa-book-open"></i>&nbsp;Process File (Excel)</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <strong>Excel Dashboard</strong>
+        <span>PivotTables • Slicers • ROI</span>
+      </div>
+    </div>
+
+    <!-- Main layout -->
+    <div class="layout">
+      <!-- Left / Content -->
+      <div class="content">
         <section>
-            <h2>About Me</h2>
-            <div class="card">
-                <p><strong>Email:</strong> <a href="mailto:maheshvadlapudi05@gmail.com">maheshvadlapudi05@gmail.com</a></p>
-                <p><strong>Phone:</strong> +91-6303095122</p>
-                <p><strong>Location:</strong> Bangalore, India</p>
-                <p>
-                    Data-driven analyst with expertise in SQL, Excel, Tableau, and Power BI, delivering impactful insights
-                    through data visualization and reporting. Skilled in extracting, cleaning, and analyzing large datasets to
-                    identify trends, anomalies, and opportunities. Certified in Data Analysis, SQL, and Excel, with practical
-                    experience from a Deloitte virtual internship.
-                </p>
-                <div class="buttons">
-                    <a href="MaheshVadlapudi_Resume_DataAnalyst.pdf" target="_blank">View Resume</a>
-                    <a href="MaheshVadlapudi_Resume_DataAnalyst.pdf" download>Download Resume</a>
-                </div>
-            </div>
+          <h2>Projects</h2>
+          <div class="projects-grid">
+            <article class="card">
+              <h3>Retail Sales Report (SQL)</h3>
+              <p>Analyzed monthly and regional sales trends using SQL queries to surface top categories and actionable insights.</p>
+              <div class="meta">
+                <span class="chip"><i class="fa-solid fa-database"></i>&nbsp;SQL</span>
+                <span class="chip"><i class="fa-solid fa-chart-line"></i>&nbsp;Reporting</span>
+              </div>
+              <div class="link-row">
+                <a class="cta" href="Retail_Sales_Report_SQL.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i>&nbsp;View PDF</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>Tableau Dashboard</h3>
+              <p>Downtime by Factory & Machine Type — interactive production insights in Tableau.</p>
+              <div class="meta">
+                <span class="chip"><i class="fa-brands fa-tableau"></i>&nbsp;Tableau</span>
+              </div>
+              <div class="link-row">
+                <a class="ghost" href="tableau_dashboard.jpg" target="_blank"><i class="fa-solid fa-image"></i>&nbsp;Preview</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>Deloitte Virtual Internship</h3>
+              <p>Completed Deloitte's virtual internship program — hands-on exposure to consulting analytics workflows.</p>
+              <div class="meta">
+                <span class="chip"><i class="fa-solid fa-award"></i>&nbsp;Certificate</span>
+              </div>
+              <div class="link-row">
+                <a class="ghost" href="deloitte_virtual_completion_certificate.pdf" target="_blank"><i class="fa-solid fa-certificate"></i>&nbsp;View Certificate</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>Marketing Campaign Dashboard (Excel)</h3>
+              <p>Interactive Excel dashboard using PivotTables, slicers, timeline and PivotCharts to measure performance by channel, region and campaign.</p>
+              <div class="meta">
+                <span class="chip"><i class="fa-solid fa-table-cells"></i>&nbsp;Excel</span>
+                <span class="chip"><i class="fa-solid fa-filter"></i>&nbsp;Slicers</span>
+              </div>
+              <div class="link-row">
+                <a class="cta" href="Marketing_Campaign_Dashboard.xlsx" target="_blank"><i class="fa-solid fa-file-excel"></i>&nbsp;View Dashboard (Excel)</a>
+                <a class="ghost" href="Marketing_Campaign_Dashboard_Process.xlsx" target="_blank"><i class="fa-solid fa-book-open"></i>&nbsp;Process File</a>
+              </div>
+            </article>
+          </div>
         </section>
+      </div>
 
-        <!-- Skills -->
-        <section>
-            <h2>Skills</h2>
-            <div class="card">
-                <p><strong>Technical:</strong> SQL, Excel, Tableau, Power BI, Data Cleaning, Data Transformation, Dashboard Development, KPI Measurement</p>
-                <p><strong>Analytical & Reporting:</strong> Data Analysis, Business Insights, Reporting</p>
-                <p><strong>Soft Skills:</strong> Critical Thinking, Communication, Attention to Detail, Team Collaboration</p>
-            </div>
-        </section>
+      <!-- Right / Sidebar -->
+      <aside class="sidebar">
+        <div class="card profile">
+          <div class="avatar">MV</div>
+          <div class="info">
+            <h4>Mahesh Vadlapudi</h4>
+            <p>Bangalore, India • maheshvadlapudi05@gmail.com</p>
+          </div>
+        </div>
 
-        <!-- Certifications -->
-        <section>
-            <h2>My Certifications</h2>
-            <ul class="cert-list">
-                <li><a href="excel_certificate.pdf" target="_blank">Excel Certificate</a></li>
-                <li><a href="data_analyst_certification.pdf" target="_blank">Data Analyst Certification</a></li>
-                <li><a href="sql_certificate.pdf" target="_blank">SQL Certificate</a></li>
-                <li><a href="deloitte_virtual_completion_certificate.pdf" target="_blank">Deloitte Virtual Completion Certificate</a></li>
-                <li><a href="introduction_to_data_analytics.pdf" target="_blank">Certificate of Introduction to Data Analytics</a></li>
-            </ul>
-        </section>
+        <div class="card contact-card">
+          <h4 style="margin:0 0 8px 0">Contact</h4>
+          <p style="margin:0 0 10px 0;color:var(--muted)">Want to discuss this project or a role? Reach out by email.</p>
+          <p style="margin:0;font-weight:700">Email</p>
+          <p style="margin:4px 0 0 0;color:var(--muted)">maheshvadlapudi05@gmail.com</p>
+          <div style="margin-top:10px;display:flex;gap:8px">
+            <a class="cta" href="mailto:maheshvadlapudi05@gmail.com"><i class="fa-solid fa-envelope"></i>&nbsp;Email</a>
+            <a class="ghost" href="MaheshVadlapudi_Resume_DataAnalyst.pdf" target="_blank"><i class="fa-solid fa-file-lines"></i>&nbsp;Resume</a>
+          </div>
+        </div>
 
-        <!-- Projects -->
-        <section>
-            <h2>Projects</h2>
+        <div class="card">
+          <h4 style="margin:0 0 10px 0">Certifications</h4>
+          <ul class="cert-list">
+            <li><a href="excel_certificate.pdf" target="_blank">Excel Certificate</a></li>
+            <li><a href="data_analyst_certification.pdf" target="_blank">Data Analyst Certification</a></li>
+            <li><a href="sql_certificate.pdf" target="_blank">SQL Certificate</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
 
-            <div class="card">
-                <h3>Retail Sales Report (SQL)</h3>
-                <p>Analyzed monthly and regional sales trends using SQL queries with JOIN, GROUP BY, and filters to identify top-performing categories. Delivered summary reports to support business strategy.</p>
-                <div class="buttons">
-                    <a href="Retail_Sales_Report_SQL.pdf" target="_blank">View PDF</a>
-                    <a href="Retail_Sales_Report_SQL.pdf" download>Download PDF</a>
-                </div>
-            </div>
+    <footer>
+      <p>© <strong>Mahesh Vadlapudi</strong> — Data Analyst • <a href="https://github.com/maheshtech15" target="_blank">GitHub</a></p>
+    </footer>
 
-            <div class="card">
-                <h3>Tableau Dashboard</h3>
-                <p>Downtime by Factory & Machine Type – Daikibo (May 2021)</p>
-                <a href="tableau_dashboard.jpg" target="_blank">
-                    <img src="tableau_dashboard.jpg" alt="Tableau Dashboard" style="width:100%; border-radius:6px;">
-                </a>
-            </div>
-
-            <div class="card">
-                <h3>Deloitte Virtual Internship</h3>
-                <p>Completion of Deloitte's Virtual Internship Program.</p>
-                <div class="buttons">
-                    <a href="deloitte_virtual_completion_certificate.pdf" target="_blank">View Certificate</a>
-                    <a href="deloitte_virtual_completion_certificate.pdf" download>Download Certificate</a>
-                </div>
-            </div>
-
-            <!-- New Marketing Campaign Dashboard Project -->
-            <div class="card">
-                <h3>Marketing Campaign Dashboard (Excel)</h3>
-                <p>
-                    Built a dynamic Excel dashboard using PivotTables, slicers, and formulas.
-                    Evaluated campaign performance across channels and regions, automated monthly reporting,
-                    and visualized results with interactive charts.
-                </p>
-                <div class="buttons">
-                    <a href="Marketing_Campaign_Dashboard.xlsx" target="_blank">View Excel File</a>
-                    <a href="Marketing_Campaign_Dashboard.xlsx" download>Download Excel File</a>
-                    <a href="Marketing_Campaign_Dashboard_Process.pdf" target="_blank">View Process PDF</a>
-                    <a href="Marketing_Campaign_Dashboard_Process.pdf" download>Download Process PDF</a>
-                </div>
-                <a href="images/final_dashboard.png" target="_blank">
-                    <img src="images/final_dashboard.png" alt="Marketing Campaign Dashboard" style="width:100%; border-radius:6px;">
-                </a>
-            </div>
-
-        </section>
-
-        <!-- Contact -->
-        <section>
-            <h2>Contact Me</h2>
-            <form action="https://formspree.io/f/xovlpowv" method="POST">
-                <label>Name:</label>
-                <input type="text" name="name" required>
-
-                <label>Email:</label>
-                <input type="email" name="email" required>
-
-                <label>Message:</label>
-                <textarea name="message" rows="5" required></textarea>
-
-                <button type="submit">Send</button>
-            </form>
-        </section>
-    </main>
+  </div>
 </body>
 </html>
